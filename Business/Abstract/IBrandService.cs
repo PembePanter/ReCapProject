@@ -7,7 +7,6 @@ namespace Business.Abstract
 {
     interface IBrandService : IServiceRepository<Brand>
     {
-        List<Brand> GetBrandById(int id);
-        List<Brand> GetBrandByName(string name);
+        List<Brand> GetBrandById(int brandId);
     }
 }

@@ -7,7 +7,6 @@ namespace Business.Abstract
 {
     public interface IColorService : IServiceRepository<Color>
     {
-        List<Color> GetColorById(int id);
-        List<Color> GetColorByName(string name);
+        List<Color> GetColorById(int colorId);
     }
 }
