@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Abstract
+namespace Core.Services
 {
-    public interface IServiceRepository<T> where T:class,IEntity
+    public interface IServiceRepository<T>
+        where T:IEntity
     {
         IDataResult<List<T>> GetAll();
+        IDataResult<T> GetById(int id);
         IResult Add(T entity);
         IResult Delete(T entity);
         IResult Update(T entity);

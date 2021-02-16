@@ -1,4 +1,6 @@
-﻿using Core.Utilities.Results;
+﻿using Core.Entities;
+using Core.Services;
+using Core.Utilities.Results;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -6,8 +8,10 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    interface IBrandService : IServiceRepository<Brand>
+    public interface IBrandService : IServiceRepository<Brand>, IService<Brand>
     {
-        IDataResult<List<Brand>> GetBrandById(int brandId);
     }
 }
+
+//System.ArgumentException: 'Cannot instantiate implementation type
+//'Business.Abstract.IBrandService' for service type 'Core.Services.IServiceRepository`1[Entities.Brand]'.'

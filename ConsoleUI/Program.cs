@@ -2,7 +2,9 @@
 using DataAccess.Concrete.EntityFrameWork;
 using DataAccess.Concrete.InMemory;
 using Entities;
+using Entities.Concrete;
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleUI
 {
@@ -10,7 +12,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            Test();
+            //Test()
         }
 
         private static void Test()
