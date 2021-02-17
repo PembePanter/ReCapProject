@@ -32,13 +32,12 @@ namespace Business.Concrete
 
         public IDataResult<List<User>> GetAll()
         {
-            _userdal.GetAll();
-            return new SuccessDataResult<List<User>>(CRUDMessages.UsersListed);
+            return new SuccessDataResult<List<User>>(_userdal.GetAll(), CRUDMessages.UsersListed);
         }
 
         public IDataResult<User> GetById(int id)
         {
-            return new SuccessDataResult<User>(_userdal.Get(u => u.Id == id));
+            return new SuccessDataResult<User>(_userdal.Get(u => u.Id == id),CRUDMessages.UsersListed);
         }
 
         public IResult Update(User entity)
